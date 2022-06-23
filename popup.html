@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <center><h1>Youtube Transcript Summarizer</h1></center>
+    <center><img src="download.png"></center>
+    <!--Summary Choice Selection Dropdown-->
+    <div class="custom-select">
+        <center>
+        <select id="summary-dropdown">
+            <option class="dropdown-text" value="0">Summary Algorithm</option>
+            <option class="dropdown-text" value="1">Frequency Based</option>
+            <option class="dropdown-text" value="2">Luhn Algorithm Based</option>
+            <option class="dropdown-text" value="3">Abstractive</option>
+        </select>
+        <br>
+        <label for="summary-dropdown">Choose Your Summarization Algorithm.</label>
+        </center>
+    </div>
+    <!--Percent Selection Dropdown-->
+    <div class="custom-select" style="margin-top: -5px;">
+        <br>
+        <center>
+        <select id="percent-dropdown">
+            <option class="dropdown-text" value="0">Summary %</option>
+            <option class="dropdown-text" value="1">10%</option>
+            <option class="dropdown-text" value="2">20%</option>
+            <option class="dropdown-text" value="3">30%</option>
+            <option class="dropdown-text" value="4">40%</option>
+            <option class="dropdown-text" value="5">50%</option>
+            <option class="dropdown-text" value="6">60%</option>
+            <option class="dropdown-text" value="7">70%</option>
+        </select>
+        <br>
+        <label for="percent-dropdown"><b>NOTE: Don't select % in case of Abstractive.</b><br>Summary will be presented in
+            selected % of sentences of the available transcript.</label>
+        </center>
+    </div>
+    <br>
+    <center>
+    <div id="summarize-div">
+        <button id="summarize">Summarize</button>
+    </div>
+    <div id="load">
+        <div id="load-icon" style="visibility:hidden"></div>
+    </div>
+    </center>
+    <!-- <div>
+        <button>Show Transcript</button>
+    </div> -->
+    <p id="contents" style="visibility:hidden">
+    </p>
+
+    <script src="popup.js"></script>
+</body>
+</html>
